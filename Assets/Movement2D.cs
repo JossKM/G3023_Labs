@@ -14,6 +14,8 @@ public class Movement2D : MonoBehaviour
 
     public float moveSpeed = 6;
 
+    public int[] intarray = new int[4];
+
     // Start is called before the first frame update
     void Start()
     {
