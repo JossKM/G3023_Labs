@@ -12,6 +12,8 @@ public class Movement2D : MonoBehaviour
                      // and will be saved in the scene
     public Rigidbody2D rb;
 
+
+    [Range(0f, 100f)]
     public float moveSpeed = 6;
 
     // Start is called before the first frame update
@@ -30,5 +32,8 @@ public class Movement2D : MonoBehaviour
                 );
 
         rb.velocity = inputVector.normalized * moveSpeed;
+
+        Vector3 position;
+        position.x = 1;
     }
 }
