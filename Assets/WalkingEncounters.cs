@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WalkingEncounters : MonoBehaviour
 {
@@ -16,7 +17,15 @@ public class WalkingEncounters : MonoBehaviour
 
     private void Start()
     {
+        SceneManager.LoadScene("Battle", LoadSceneMode.Additive);
+        SceneManager.sceneLoaded += SceneLoadedListener;
         body = GetComponent<Rigidbody2D>();
+    }
+
+    public void SceneLoadedListener(Scene scene, LoadSceneMode mode)
+    {
+        encounter = GameObject.Find("BattleCanvas");
+        encounter.SetActive(false);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -34,8 +43,8 @@ public class WalkingEncounters : MonoBehaviour
 
                 if (tileData.RollEncounter())
                 {
-                   // encounter.SetActive(true);
-                    Debug.Log("Encounter!" + tileData.areaName);
+                    encounter.SetActive(true);
+                    // Debug.Log("Encounter!" + tileData.areaName);
                 }
             }
         }
