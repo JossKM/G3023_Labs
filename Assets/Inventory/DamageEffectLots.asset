@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86b861bd10a74b74c9419523e0b651c5, type: 3}
   m_Name: DamageEffectLots
   m_EditorClassIdentifier: 
-  attackValue: 100
+  basePower: 5
+  strScalar: 0
+  dexScalar: 0
+  intScalar: 0
