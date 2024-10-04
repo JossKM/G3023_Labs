@@ -20500,9 +20500,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 1.95
       objectReference: {fileID: 0}
+    - target: {fileID: 1077448948278399692, guid: a499c6fe5703d9f469d5832d2959df4a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.73
+      objectReference: {fileID: 0}
     - target: {fileID: 2091123547139617953, guid: a499c6fe5703d9f469d5832d2959df4a, type: 3}
       propertyPath: orthographic size
-      value: 10.0625
+      value: 11.25
       objectReference: {fileID: 0}
     - target: {fileID: 2181744123546861177, guid: a499c6fe5703d9f469d5832d2959df4a, type: 3}
       propertyPath: m_Enabled
@@ -20527,6 +20531,14 @@ PrefabInstance:
     - target: {fileID: 6473409939444121290, guid: a499c6fe5703d9f469d5832d2959df4a, type: 3}
       propertyPath: m_Color.r
       value: 0.64433783
+      objectReference: {fileID: 0}
+    - target: {fileID: 6927951941621694383, guid: a499c6fe5703d9f469d5832d2959df4a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496978783411273736, guid: a499c6fe5703d9f469d5832d2959df4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

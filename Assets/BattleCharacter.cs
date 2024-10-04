@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,10 +7,14 @@ public class BattleCharacter : MonoBehaviour
 {
     private int hitPoints = 1;
     public int HitPoints { get { return hitPoints; } private set {  hitPoints = value; } }
+    public int defense = 1;
+    public int strength = 0;
+    public int dexterity = 0;
+    public int intelligence = 0;
 
-    public void TakeAttack(int attackValue)
+    public void TakeDamage(int damageValue)
     {
-        hitPoints -= attackValue;
+        hitPoints -= damageValue;
     }
 
     public void TakeHealing(int healValue)
@@ -26,6 +31,5 @@ public class BattleCharacter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

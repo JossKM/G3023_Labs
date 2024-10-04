@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,13 +9,13 @@ public class Item : ScriptableObject
     public string description = "Default Description";
     public List<Effect> effects = new List<Effect>();
 
-    public void Use(BattleCharacter target)
+    public void Use(BattleCharacter caster, BattleCharacter target)
     {
         Debug.Log("Used: " + name + " on " + target.name + "\n" + description);
 
         foreach(Effect effect in effects)
         {
-            effect.Apply(target, target);
+            effect.Apply(caster, target);
         }
     }
 }

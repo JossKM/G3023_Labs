@@ -44,6 +44,7 @@ public class WalkingEncounters : MonoBehaviour
                 if (tileData.RollEncounter())
                 {
                     encounter.SetActive(true);
+                    gameObject.SetActive(false);
                     // Debug.Log("Encounter!" + tileData.areaName);
                 }
             }
