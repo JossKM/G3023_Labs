@@ -14,7 +14,7 @@ public class BattleCharacter : MonoBehaviour
     public int dexterity = 0;
     public int intelligence = 0;
 
-    public Dictionary<StatusInstance, int> statusEffects = new Dictionary<StatusInstance, int>();
+    public Dictionary<Effect, int> statusEffects = new Dictionary<Effect, int>();
 
     public void TakeDamage(int damageValue)
     {

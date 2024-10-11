@@ -17,3 +17,4 @@ MonoBehaviour:
   description: Get SDL_DrawRect Scrub
   effects:
   - {fileID: 11400000, guid: 9f124568577f1e847b8192e4cd38a232, type: 2}
+  - {fileID: 11400000, guid: 9f124568577f1e847b8192e4cd38a232, type: 2}

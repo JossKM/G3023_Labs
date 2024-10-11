@@ -29,7 +29,6 @@ public class BattleSystem : MonoBehaviour
                 effect.Key.Apply(character, character);
                 character.statusEffects[effect.Key] = effect.Value - 1;
             }
-            
         }
     }
 

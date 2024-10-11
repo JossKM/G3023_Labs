@@ -2,16 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StatusInstance
-{
-    public Effect effect;
-
-    public void Apply(BattleCharacter caster, BattleCharacter target)
-    {
-        effect.Apply(caster, target);
-    }
-}
-
+[CreateAssetMenu(fileName = "PoisonTickEffect", menuName = "Effects/PoisonTickEffect")]
 public class PoisonTickEffect : Effect
 {
     public int tickValue;
