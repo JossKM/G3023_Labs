@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fedc97aea6c02a4db74b67e973e0fc0, type: 3}
   m_Name: AddHealOverTime
   m_EditorClassIdentifier: 
-  toApply: {fileID: 11400000, guid: 5fd75487cee008d4c97c952c9d96e288, type: 2}
+  toApply: {fileID: 11400000, guid: 9f124568577f1e847b8192e4cd38a232, type: 2}
   duration: 7

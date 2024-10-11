@@ -24,7 +24,7 @@ public class WalkingEncounters : MonoBehaviour
 
     public void SceneLoadedListener(Scene scene, LoadSceneMode mode)
     {
-        encounter = GameObject.Find("BattleCanvas");
+        encounter = FindFirstObjectByType<BattleSystem>().gameObject;
         encounter.SetActive(false);
     }
 
