@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class StatusAttack : Effect
 {
-    public StatusEffect toApply;
+    public StatusInstance toApply;
+    public int stacks = 1;
 
     public override void Apply(BattleCharacter caster, BattleCharacter target)
     {
-        target.statusEffects.Add(toApply);
+        target.statusEffects.Add(toApply, stacks);
     }
 }

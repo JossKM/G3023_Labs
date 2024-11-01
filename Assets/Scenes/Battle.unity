@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 751268794931938541, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1318311415169181512, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -202,6 +206,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740643445377903184, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
+      propertyPath: itemInSlot
+      value: 
+      objectReference: {fileID: 11400000, guid: d98e4f5f9d52137489dd86a19dbec4dc, type: 2}
     - target: {fileID: 2039860803738556449, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -354,14 +362,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3000608424932619822, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3233940133693494910, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
       propertyPath: itemInSlot
       value: 
       objectReference: {fileID: 11400000, guid: 0977b472437548247bebe7777e044086, type: 2}
+    - target: {fileID: 4023911055366676056, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1950466931, guid: 104cce24307cc944fb6cc2a34c199946, type: 3}
     - target: {fileID: 4466269249311929934, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
       propertyPath: m_Name
       value: BattleCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4466269249311929934, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4643050426290417804, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -386,6 +406,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4689501428164664993, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
+      propertyPath: itemInSlot
+      value: 
+      objectReference: {fileID: 11400000, guid: 0977b472437548247bebe7777e044086, type: 2}
+    - target: {fileID: 5004612983475053720, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004612983475053720, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 6405077378295447034, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -458,6 +490,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7123906501543406690, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
+      propertyPath: itemInSlot
+      value: 
+      objectReference: {fileID: 11400000, guid: d98e4f5f9d52137489dd86a19dbec4dc, type: 2}
+    - target: {fileID: 7140942153132240548, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
+      propertyPath: m_text
+      value: ElixirOfOpenGL
+      objectReference: {fileID: 0}
     - target: {fileID: 7977925139953968513, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -481,6 +521,10 @@ PrefabInstance:
     - target: {fileID: 7977925139953968513, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113296545149518559, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8832118446527717116, guid: 86eaf1941f3898941b16f2712fa8bb67, type: 3}
       propertyPath: m_AnchorMax.y
@@ -580,6 +624,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onTurnBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  onTurnEnd:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1660057539 &9223372036854775807

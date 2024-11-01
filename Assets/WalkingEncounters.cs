@@ -17,15 +17,16 @@ public class WalkingEncounters : MonoBehaviour
 
     private void Start()
     {
-        SceneManager.LoadScene("Battle", LoadSceneMode.Additive);
-        SceneManager.sceneLoaded += SceneLoadedListener;
+        encounter = GameObject.Find("BattleCanvas");
+        // SceneManager.LoadScene("Battle", LoadSceneMode.Additive);
+        //  SceneManager.sceneLoaded += SceneLoadedListener;
         body = GetComponent<Rigidbody2D>();
     }
 
     public void SceneLoadedListener(Scene scene, LoadSceneMode mode)
     {
         encounter = GameObject.Find("BattleCanvas");
-        encounter.SetActive(false);
+       // encounter.SetActive(false);
     }
 
     private void OnTriggerStay2D(Collider2D collision)

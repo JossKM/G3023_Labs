@@ -42,6 +42,7 @@ public class ItemSlot : MonoBehaviour
         if (itemInSlot != null)
         {
             itemInSlot.Use(inventory.owner, inventory.owner);
+            itemInSlot = null;
         }
     }
 }
