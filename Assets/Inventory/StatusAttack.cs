@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class StatusAttack : Effect
 {
-    public StatusInstance toApply;
+    public StatusEffect toApply;
 
     public override void Apply(BattleCharacter caster, BattleCharacter target)
     {
-        target.statusEffects.Add(toApply, 1);
+        target.statusEffects.Add(toApply);
     }
 }
