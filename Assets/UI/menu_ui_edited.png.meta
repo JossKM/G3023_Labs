@@ -226,12 +226,12 @@ TextureImporter:
       name: menu_ui_edited_6
       rect:
         serializedVersion: 2
-        x: 252
-        y: 389
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 256
+        y: 391
+        width: 3
+        height: 4
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -890,27 +890,6 @@ TextureImporter:
       bones: []
       spriteID: 3bf1694f22094a941aa85655092e8dcf
       internalID: -955045824
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: menu_ui_edited_38
-      rect:
-        serializedVersion: 2
-        x: 30
-        y: 348
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fed10662f5b97074aa05f0aea19f3c20
-      internalID: -238701260
       vertices: []
       indices: 
       edges: []
