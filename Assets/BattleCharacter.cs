@@ -3,6 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class EffectInstanceData
+{
+    public Effect effect;
+    public int duration;
+    public float power;
+
+    public EffectInstanceData(Effect effect, int duration, float power)
+    {
+        this.effect = effect;
+        this.duration = duration;
+        this.power = power;
+    }
+}
+
 public class BattleCharacter : MonoBehaviour
 {
     private int hitPoints = 1;
@@ -14,7 +28,7 @@ public class BattleCharacter : MonoBehaviour
     public int dexterity = 0;
     public int intelligence = 0;
 
-    public Dictionary<Effect, int> statusEffects = new Dictionary<Effect, int>();
+    public List<EffectInstanceData> statusEffects;
 
     public void TakeDamage(int damageValue)
     {

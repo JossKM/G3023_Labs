@@ -17,19 +17,20 @@ public class BattleSystem : MonoBehaviour
     public UnityEvent<BattleCharacter> onTurnBegin;
     public UnityEvent<BattleCharacter> onTurnEnd;
 
+    private static bool StatusEnded(EffectInstanceData e)
+    {
+        return e.duration <= 0;
+    }
+
     public void BeginTurn(BattleCharacter character)
     {
-        foreach (var effect in character.statusEffects)
+        for(int i = 0; i < character.statusEffects.Count; i++)
         {
-            if(effect.Value <= 0)
-            {
-                character.statusEffects.Remove(effect.Key);
-            } else
-            {
-                effect.Key.Apply(character, character);
-                character.statusEffects[effect.Key] = effect.Value - 1;
-            }
+            character.statusEffects[i].effect.Apply(character, character);
+            character.statusEffects[i].duration -= 1;
         }
+
+        character.statusEffects.RemoveAll(StatusEnded);
     }
 
     public void UseItem(Item item, BattleCharacter caster, BattleCharacter target)
@@ -46,7 +47,24 @@ public class BattleSystem : MonoBehaviour
             }
 
             OnEffect.Invoke(this, caster, target, effect);
-            effect.Apply(caster, target);
+
+            switch (effect.targetingType)
+            {
+                case TargetType.Target:
+                    effect.Apply(caster, target);
+                    break;
+                case TargetType.Caster:
+                    effect.Apply(caster, caster);
+                    break;
+                case TargetType.All:
+                    effect.Apply(caster, target);
+                    effect.Apply(caster, caster);
+                    break;
+                case TargetType.None:
+                    break;
+                case TargetType.Count:
+                    throw new Exception("Invalid TargetingType");
+            }
         }
     }
 

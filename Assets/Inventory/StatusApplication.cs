@@ -3,14 +3,16 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "StatusApplication", menuName = "Effects/StatusApplication")]
-public class StatusAttack : Effect
+public class StatusApplication : Effect
 {
     public Effect toApply;
     public int duration = 1;
+    StatScaling scaling;
 
     public override void Apply(BattleCharacter caster, BattleCharacter target)
     {
-        target.statusEffects.Add(toApply, duration);
+        float scaledPower = scaling.GetScaledPower(caster);
+        target.statusEffects.Add(new EffectInstanceData(toApply, duration, scaledPower));
     }
 }
 
