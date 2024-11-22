@@ -15,10 +15,8 @@ public class StatScaling
          + strScalar * caster.strength
          + dexScalar * caster.dexterity
          + intScalar * caster.intelligence;
-
         return scaledPower;
     }
-
 }
 
 public enum TargetType
@@ -33,5 +31,5 @@ public enum TargetType
 public abstract class Effect : ScriptableObject
 {
     public TargetType targetingType;
-    public abstract void Apply(BattleCharacter caster, BattleCharacter target);
+    public abstract void Apply(BattleCharacter caster, BattleCharacter target, float power = 1);
 }

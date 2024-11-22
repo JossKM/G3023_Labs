@@ -5,8 +5,8 @@ public class HealEffect : Effect
 {
     public int healValue = 1;
 
-    public override void Apply(BattleCharacter caster, BattleCharacter target)
+    public override void Apply(BattleCharacter caster, BattleCharacter target, float power = 1)
     {
-        target.TakeHealing(healValue);
+        target.TakeHealing((int)(healValue * power));
     }
 }

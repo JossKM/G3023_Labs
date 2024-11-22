@@ -6,6 +6,7 @@ public class Item : ScriptableObject
 {
     public Sprite sprite;
     public int value = 0;
+    public float power = 1;
     public string description = "Default Description";
     public List<Effect> effects = new List<Effect>();
 
@@ -13,9 +14,11 @@ public class Item : ScriptableObject
     {
         Debug.Log("Used: " + name + " on " + target.name + "\n" + description);
 
-        foreach(Effect effect in effects)
+        foreach (Effect effect in effects)
         {
-            effect.Apply(caster, target);
+            string str = effect.ToString();
+            Debug.Log("Effects name: " + str + " --- Class: " + effect.GetType().Name);
+            effect.Apply(caster, target, power);
         }
     }
 }

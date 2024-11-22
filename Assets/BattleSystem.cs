@@ -24,10 +24,10 @@ public class BattleSystem : MonoBehaviour
 
     public void BeginTurn(BattleCharacter character)
     {
-        for(int i = 0; i < character.statusEffects.Count; i++)
+        foreach(EffectInstanceData status in character.statusEffects)
         {
-            character.statusEffects[i].effect.Apply(character, character);
-            character.statusEffects[i].duration -= 1;
+            status.effect.Apply(character, character, status.power);
+            status.duration -= 1;
         }
 
         character.statusEffects.RemoveAll(StatusEnded);

@@ -7,8 +7,8 @@ public class PoisonTickEffect : Effect
 {
     public int tickValue;
 
-    public override void Apply(BattleCharacter caster, BattleCharacter target)
+    public override void Apply(BattleCharacter caster, BattleCharacter target, float power = 1)
     {
-        target.TakeDamage(tickValue);
+        target.TakeDamage((int)(tickValue * power));
     }
 }
