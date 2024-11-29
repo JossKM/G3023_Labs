@@ -1,6 +1,20 @@
 using System;
 using UnityEngine;
 
+public class EffectInstanceData
+{
+    public Effect effect;
+    public int duration;
+    public float power;
+
+    public EffectInstanceData(Effect effect, int duration, float power)
+    {
+        this.effect = effect;
+        this.duration = duration;
+        this.power = power;
+    }
+}
+
 [Serializable]
 public class StatScaling
 {

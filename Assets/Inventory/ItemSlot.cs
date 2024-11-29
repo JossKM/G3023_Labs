@@ -1,8 +1,9 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemSlot : MonoBehaviour
+public class ItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Inventory inventory;
     public Item itemInSlot = null;
@@ -42,6 +43,22 @@ public class ItemSlot : MonoBehaviour
         if (itemInSlot != null)
         {
             itemInSlot.Use(inventory.owner, inventory.owner);
+        }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (itemInSlot != null)
+        {
+           inventory.itemDescription.text = itemInSlot.name + "\n" + itemInSlot.description;
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (itemInSlot != null)
+        {
+            inventory.itemDescription.text = "";
         }
     }
 }
