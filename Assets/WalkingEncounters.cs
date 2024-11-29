@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Yarn.Unity;
 
 public class WalkingEncounters : MonoBehaviour
 {
@@ -28,6 +29,13 @@ public class WalkingEncounters : MonoBehaviour
         encounter.SetActive(false);
     }
 
+    [YarnCommand("StartBattle")]
+    public void StartBattle(string name)
+    {
+        encounter.SetActive(true);
+        gameObject.SetActive(false);
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         EncounterTile tileData = collision.GetComponent<EncounterTile>();
@@ -43,8 +51,7 @@ public class WalkingEncounters : MonoBehaviour
 
                 if (tileData.RollEncounter())
                 {
-                    encounter.SetActive(true);
-                    gameObject.SetActive(false);
+                    StartBattle("wild");
                     // Debug.Log("Encounter!" + tileData.areaName);
                 }
             }

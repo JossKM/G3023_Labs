@@ -1,0 +1,25 @@
+﻿title: MyDialogue
+tags:
+position: 11,-95
+---
+Hello World!
+
+->OK.
+    ok!
+    <<jump OK>>
+->No.
+    aw.
+
+Goodbye World! Play again?
+->Yes!
+    <<jump MyDialogue>>
+->No, thanks
+    <<stop>>
+===
+
+title: OK
+position: 484,-257
+---
+OK: ok!
+<<stop>>
+===

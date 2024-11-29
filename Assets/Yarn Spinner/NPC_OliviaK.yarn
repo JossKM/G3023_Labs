@@ -1,0 +1,12 @@
+﻿title: NPC_OliviaK
+tags:
+---
+My name is Olivia Kazinski. You can call me OK.
+->okay?
+    O.K: ok. Yes, that's right
+->okay!
+    O.K: yes! ok!
+Wanna battle?
+->okay!
+<<StartBattle Alex Olivia_K>>
+===

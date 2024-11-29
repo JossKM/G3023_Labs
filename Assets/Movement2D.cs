@@ -16,21 +16,26 @@ public class Movement2D : MonoBehaviour
     [Range(0f, 100f)]
     public float moveSpeed = 6;
 
+    Vector2 inputVector;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        Vector2 inputVector =
-            new Vector2(
-                Input.GetAxisRaw("Horizontal"),
-                Input.GetAxisRaw("Vertical")
-                );
+        inputVector =
+          new Vector2(
+              Input.GetAxisRaw("Horizontal"),
+              Input.GetAxisRaw("Vertical")
+              );
+    }
 
+    // Update is called once per frame
+    void FixedUpdate()
+    {
         rb.velocity = inputVector.normalized * moveSpeed;
 
         Vector3 position;
